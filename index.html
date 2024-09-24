@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background-image">
+    <div class="content-wrapper">
+        <header>
+            <h1>Recipe Book</h1>
+        </header>
+        <section id="recipe-form">
+            <h2>Add a Recipe</h2>
+            <form id="add-recipe-form">
+                <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+                <textarea id="recipe-ingredients" placeholder="Ingredients" required></textarea>
+                <textarea id="recipe-steps" placeholder="Preparation Steps" required></textarea>
+                <input type="file" id="recipe-image" accept="image/*">
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <div id="recipe-list"></div>
+        </section>
+    </div>
+    <!-- Edit Recipe Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Edit Recipe</h2>
+            <form id="edit-recipe-form">
+                <input type="hidden" id="edit-recipe-id">
+                <input type="text" id="edit-recipe-name" placeholder="Recipe Name" required>
+                <textarea id="edit-recipe-ingredients" placeholder="Ingredients" required></textarea>
+                <textarea id="edit-recipe-steps" placeholder="Preparation Steps" required></textarea>
+                <input type="file" id="edit-recipe-image" accept="image/*">
+                <button type="submit">Update Recipe</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
